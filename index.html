@@ -76,7 +76,7 @@
 	);
 		},
 		onEachFeature: function (feature, layer) {
-			layer.bindPopup('<h1>'+feature.properties.CITY_NAME+'</h1>'+feature.properties.CNTRY_NAME);
+			layer.bindPopup('<h1>'+feature.properties.Name+'</h1>'+feature.properties.LocalName);
 		}
 	}).addTo(map);
 
