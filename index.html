@@ -34,7 +34,7 @@
 <body>
 
 <div id='map'></div>
-<div id="Home-link"><a href='https://bgrrw.github.io/Yukon/'><img src="Blank.png"  width="168" height="84"/></div>
+<div id="Home-link"><a href='https://bgrrw.github.io/Yukon/'><img src="blank.png"  width="168" height="84"/></div>
 <script>
 
     var map = L.map('map', {
@@ -70,7 +70,8 @@
 	//Fit Map to image overlay
 	map.fitBounds(latLngBounds);
 	map.options.minZoom = map.getZoom()-0.5;
-	
+	//Mini-Map
+	var worldMiniMap = L.control.worldMiniMap({position: 'bottomleft', style: {opacity: 0.9, borderRadius: '0px', backgroundColor: 'lightblue'}}).addTo(map);
 	//Cities Points
 	var cities = L.geoJSON(cities, {
 		pointToLayer: function (feature, latlng) {
